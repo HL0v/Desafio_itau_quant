@@ -1,0 +1,263 @@
+2025-09-20 00:48:37,333 - INFO - 
+
+🚀 Starting Stock News Monitor
+
+2025-09-20 00:48:37,336 - INFO - Monitoring tickers: Brasil
+
+2025-09-20 00:48:37,336 - INFO - Refresh interval: 30 seconds
+
+2025-09-20 00:48:37,336 - INFO - Keywords: coringascommodities, biodiesel, biocombustíveis, estoques, produção... (+36 more)
+
+2025-09-20 00:48:37,336 - INFO - Press Ctrl+C to stop
+
+2025-09-20 00:48:37,336 - INFO - ================================================================================
+
+2025-09-20 00:48:37,336 - INFO - 🔍 Checking news for tickers: Brasil
+2025-09-20 00:48:37,801 - ERROR - Error fetching news for Brasil: {'status': 'error', 'code': 'queryTooLong', 'message': 'Your query is too long (730 chars). Please reduce your query to 500 chars, or split it into multiple smaller requests.'}
+2025-09-20 00:48:37,802 - INFO - No new relevant articles found
+2025-09-20 00:48:50,223 - INFO - 
+👋 Stopping Stock News Monitor...
+2025-09-20 00:48:50,223 - INFO - Monitor stopped by user
+2025-09-20 00:52:14,867 - INFO - 
+
+🚀 Starting Stock News Monitor
+
+2025-09-20 00:52:14,867 - INFO - Monitoring tickers: Brasil
+
+2025-09-20 00:52:14,867 - INFO - Refresh interval: 30 seconds
+
+2025-09-20 00:52:14,867 - INFO - Keywords: commodities, plantio, colheita, clima, chuva... (+25 more)
+
+2025-09-20 00:52:14,867 - INFO - Press Ctrl+C to stop
+
+2025-09-20 00:52:14,867 - INFO - ================================================================================
+
+2025-09-20 00:52:14,867 - INFO - 🔍 Checking news for tickers: Brasil
+2025-09-20 00:52:15,992 - INFO - Found 20 total articles for Brasil
+2025-09-20 00:52:15,992 - INFO - Article: Honor X9d 5G ganha data de lançamento e tem design revelado
+2025-09-20 00:52:15,992 - INFO - Matched keywords: []
+2025-09-20 00:52:15,992 - INFO - Article: Mansões flutuantes levam luxo imobiliário ao alto-mar
+2025-09-20 00:52:15,992 - INFO - Matched keywords: []
+2025-09-20 00:52:15,992 - INFO - Article: Presidente da EBC discute futuro da TV brasileira em especial dos 75 anos no Sem Censura
+2025-09-20 00:52:15,992 - INFO - Matched keywords: []
+2025-09-20 00:52:15,992 - INFO - Article: A&E e History - Destaques para o fim de semana (19 a 21/9)
+2025-09-20 00:52:15,992 - INFO - Matched keywords: []
+2025-09-20 00:52:15,992 - INFO - Article: Temer afirma que Trump pode ajudar Lula nas eleições de 2026: 'O maior cabo eleitoral'
+2025-09-20 00:52:15,992 - INFO - Matched keywords: ['tarifas']
+2025-09-20 00:52:15,992 - INFO - Article: Fumaça de queimadas pode matar milhões por ano; entenda o risco
+2025-09-20 00:52:15,992 - INFO - Matched keywords: []
+2025-09-20 00:52:15,992 - INFO - Article: None
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: None
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: Pressão 12 por 8 passa a ser considerada pré-hipertensão no Brasil
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: Uber vai lançar entrega por drone nos EUA ainda em 2025
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: Projeto inédito audiovisual traz Amaro Freitas, Ana Frango Elétrico e Vanessa Moreno se apresentando em espaços pouco convencionais do Sesc
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: Lula se reunirá com Celso Sabino após União exigir saída do governo em 24 horas
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: Autoridades prestigiam jantar do Instituto Vencer o Câncer no DF
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: 15% OFF: Mídia digital do Mario Kart World para Switch 2 entra em oferta no Mercado Livre
+2025-09-20 00:52:15,993 - INFO - Matched keywords: ['oferta']
+2025-09-20 00:52:15,993 - INFO - Article: 12 por 8 agora é pressão alta
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: GM e WEG fornecem carros elétricos e carregadores para a Presidência da República
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: A China venceu e Montenegro foi a Pequim
+2025-09-20 00:52:15,993 - INFO - Matched keywords: ['China']
+2025-09-20 00:52:15,993 - INFO - Article: Charlie Kirk
+2025-09-20 00:52:15,993 - INFO - Matched keywords: []
+2025-09-20 00:52:15,993 - INFO - Article: Lixo eletrônico representa riscos e exige soluções seguras
+2025-09-20 00:52:15,994 - INFO - Matched keywords: []
+2025-09-20 00:52:15,994 - INFO - Article: Francisco Júnior: Só CentrãoZINHO, mesmo?
+2025-09-20 00:52:15,994 - INFO - Matched keywords: []
+2025-09-20 00:52:15,994 - INFO - 📈 soy news alert - 2025-09-20 00:52:15
+2025-09-20 00:52:15,994 - INFO - 
+================================================================================
+2025-09-20 00:52:15,994 - INFO - ================================================================================
+2025-09-20 00:52:15,994 - INFO - Ticker: Brasil
+2025-09-20 00:52:15,994 - INFO - Title: Temer afirma que Trump pode ajudar Lula nas eleições de 2026: 'O maior cabo eleitoral'
+2025-09-20 00:52:15,994 - INFO - Published: 2025-09-19T01:38:07Z
+2025-09-20 00:52:15,994 - INFO - URL: https://www.terra.com.br/noticias/brasil/politica/temer-afirma-que-trump-pode-ajudar-lula-nas-eleicoes-de-2026-o-maior-cabo-eleitoral,106187ebd5190ab987f828857a4cf46dw2n2iqbz.html
+2025-09-20 00:52:15,994 - INFO - Matched Keywords: tarifas
+2025-09-20 00:52:15,994 - INFO - Description: Temer sugere que Trump pode fortalecer Lula nas eleições de 2026, enfatizando a importância do diálogo entre os presidentes dos EUA e Brasil para tratar tarifas comerciais. Confira como essa dinâmica ...
+
+2025-09-20 00:52:15,994 - INFO - 🤖 AI Analysis requested for: https://www.terra.com.br/noticias/brasil/politica/temer-afirma-que-trump-pode-ajudar-lula-nas-eleicoes-de-2026-o-maior-cabo-eleitoral,106187ebd5190ab987f828857a4cf46dw2n2iqbz.html
+2025-09-20 00:52:15,994 - INFO - AI Analysis: AI analysis not yet implemented
+
+2025-09-20 00:52:15,994 - INFO - 📈 soy news alert - 2025-09-20 00:52:15
+2025-09-20 00:52:15,994 - INFO - 
+================================================================================
+2025-09-20 00:52:15,994 - INFO - ================================================================================
+2025-09-20 00:52:15,994 - INFO - Ticker: Brasil
+2025-09-20 00:52:15,994 - INFO - Title: 15% OFF: Mídia digital do Mario Kart World para Switch 2 entra em oferta no Mercado Livre
+2025-09-20 00:52:15,994 - INFO - Published: 2025-09-18T23:39:06Z
+2025-09-20 00:52:15,994 - INFO - URL: https://br.ign.com/descontos/146215/news/15-off-midia-digital-do-mario-kart-world-para-switch-2-entra-em-oferta-no-mercado-livre
+2025-09-20 00:52:15,994 - INFO - Matched Keywords: oferta
+2025-09-20 00:52:15,994 - INFO - Description: Acelere sua diversão: viva corridas emocionantes, pistas incríveis e personagens icônicos em Mario Kart World para Switch 2! Aproveite agora com desconto exclusivo
+Se você estava esperando o momento c...
+
+2025-09-20 00:52:15,994 - INFO - 🤖 AI Analysis requested for: https://br.ign.com/descontos/146215/news/15-off-midia-digital-do-mario-kart-world-para-switch-2-entra-em-oferta-no-mercado-livre
+2025-09-20 00:52:15,994 - INFO - AI Analysis: AI analysis not yet implemented
+
+2025-09-20 00:52:15,994 - INFO - 📈 soy news alert - 2025-09-20 00:52:15
+2025-09-20 00:52:15,994 - INFO - 
+================================================================================
+2025-09-20 00:52:15,994 - INFO - ================================================================================
+2025-09-20 00:52:15,994 - INFO - Ticker: Brasil
+2025-09-20 00:52:15,994 - INFO - Title: A China venceu e Montenegro foi a Pequim
+2025-09-20 00:52:15,994 - INFO - Published: 2025-09-18T23:19:18Z
+2025-09-20 00:52:15,994 - INFO - URL: https://observador.pt/opiniao/a-china-venceu-e-montenegro-foi-a-pequim/
+2025-09-20 00:52:15,994 - INFO - Matched Keywords: China
+2025-09-20 00:52:15,994 - INFO - Description: Não faz sentido – pela história, pela geografia, pela natureza do regime – Portugal alinhar com um bloco chinês. Mas é evidente que a generalidade dos países europeus está a procurar melhores relações
+
+2025-09-20 00:52:15,994 - INFO - 🤖 AI Analysis requested for: https://observador.pt/opiniao/a-china-venceu-e-montenegro-foi-a-pequim/
+2025-09-20 00:52:15,994 - INFO - AI Analysis: AI analysis not yet implemented
+
+2025-09-20 00:52:15,994 - INFO - Found 3 new relevant articles
+2025-09-20 00:52:23,645 - INFO - 
+👋 Stopping Stock News Monitor...
+2025-09-20 00:52:23,645 - INFO - Monitor stopped by user
+2025-09-20 01:08:37,099 - INFO - 
+
+🚀 Starting Soy News Monitor
+
+2025-09-20 01:08:37,101 - INFO - Monitoring tickers: Brasil
+
+2025-09-20 01:08:37,101 - INFO - Refresh interval: 30 seconds
+
+2025-09-20 01:08:37,101 - INFO - Keywords: commodities, plantio, colheita, clima, chuva... (+25 more)
+
+2025-09-20 01:08:37,101 - INFO - Press Ctrl+C to stop
+
+2025-09-20 01:08:37,101 - INFO - ================================================================================
+
+2025-09-20 01:08:37,101 - INFO - 🔍 Checking news for tickers: Brasil
+2025-09-20 01:08:37,747 - INFO - Found 20 total articles for Brasil
+2025-09-20 01:08:37,748 - INFO - Article: BBC perguntou 6 vezes a Lula se ele tentou ligar para Trump; veja o que o presidente respondeu
+2025-09-20 01:08:37,748 - INFO - Matched keywords: []
+2025-09-20 01:08:37,748 - INFO - Article: Honor X9d 5G ganha data de lançamento e tem design revelado
+2025-09-20 01:08:37,748 - INFO - Matched keywords: []
+2025-09-20 01:08:37,748 - INFO - Article: Mansões flutuantes levam luxo imobiliário ao alto-mar
+2025-09-20 01:08:37,748 - INFO - Matched keywords: []
+2025-09-20 01:08:37,748 - INFO - Article: Presidente da EBC discute futuro da TV brasileira em especial dos 75 anos no Sem Censura
+2025-09-20 01:08:37,748 - INFO - Matched keywords: []
+2025-09-20 01:08:37,748 - INFO - Article: A&E e History - Destaques para o fim de semana (19 a 21/9)
+2025-09-20 01:08:37,748 - INFO - Matched keywords: []
+2025-09-20 01:08:37,748 - INFO - Article: Temer afirma que Trump pode ajudar Lula nas eleições de 2026: 'O maior cabo eleitoral'
+2025-09-20 01:08:37,748 - INFO - Matched keywords: ['tarifas']
+2025-09-20 01:08:37,748 - INFO - Article: Fumaça de queimadas pode matar milhões por ano; entenda o risco
+2025-09-20 01:08:37,748 - INFO - Matched keywords: []
+2025-09-20 01:08:37,748 - INFO - Article: None
+2025-09-20 01:08:37,748 - INFO - Matched keywords: []
+2025-09-20 01:08:37,748 - INFO - Article: None
+2025-09-20 01:08:37,748 - INFO - Matched keywords: []
+2025-09-20 01:08:37,748 - INFO - Article: Pressão 12 por 8 passa a ser considerada pré-hipertensão no Brasil
+2025-09-20 01:08:37,749 - INFO - Matched keywords: []
+2025-09-20 01:08:37,749 - INFO - Article: Uber vai lançar entrega por drone nos EUA ainda em 2025
+2025-09-20 01:08:37,749 - INFO - Matched keywords: []
+2025-09-20 01:08:37,749 - INFO - Article: Projeto inédito audiovisual traz Amaro Freitas, Ana Frango Elétrico e Vanessa Moreno se apresentando em espaços pouco convencionais do Sesc
+2025-09-20 01:08:37,749 - INFO - Matched keywords: []
+2025-09-20 01:08:37,749 - INFO - Article: Lula se reunirá com Celso Sabino após União exigir saída do governo em 24 horas
+2025-09-20 01:08:37,749 - INFO - Matched keywords: []
+2025-09-20 01:08:37,749 - INFO - Article: Autoridades prestigiam jantar do Instituto Vencer o Câncer no DF
+2025-09-20 01:08:37,749 - INFO - Matched keywords: []
+2025-09-20 01:08:37,749 - INFO - Article: 15% OFF: Mídia digital do Mario Kart World para Switch 2 entra em oferta no Mercado Livre
+2025-09-20 01:08:37,749 - INFO - Matched keywords: ['oferta']
+2025-09-20 01:08:37,749 - INFO - Article: 12 por 8 agora é pressão alta
+2025-09-20 01:08:37,749 - INFO - Matched keywords: []
+2025-09-20 01:08:37,749 - INFO - Article: GM e WEG fornecem carros elétricos e carregadores para a Presidência da República
+2025-09-20 01:08:37,749 - INFO - Matched keywords: []
+2025-09-20 01:08:37,749 - INFO - Article: A China venceu e Montenegro foi a Pequim
+2025-09-20 01:08:37,749 - INFO - Matched keywords: ['China']
+2025-09-20 01:08:37,749 - INFO - Article: Charlie Kirk
+2025-09-20 01:08:37,749 - INFO - Matched keywords: []
+2025-09-20 01:08:37,749 - INFO - Article: Lixo eletrônico representa riscos e exige soluções seguras
+2025-09-20 01:08:37,749 - INFO - Matched keywords: []
+2025-09-20 01:08:37,749 - INFO - 📈 soy news alert - 2025-09-20 01:08:37
+2025-09-20 01:08:37,749 - INFO - 
+================================================================================
+2025-09-20 01:08:37,749 - INFO - ================================================================================
+2025-09-20 01:08:37,749 - INFO - Ticker: Brasil
+2025-09-20 01:08:37,749 - INFO - Title: Temer afirma que Trump pode ajudar Lula nas eleições de 2026: 'O maior cabo eleitoral'
+2025-09-20 01:08:37,749 - INFO - Published: 2025-09-19T01:38:07Z
+2025-09-20 01:08:37,749 - INFO - URL: https://www.terra.com.br/noticias/brasil/politica/temer-afirma-que-trump-pode-ajudar-lula-nas-eleicoes-de-2026-o-maior-cabo-eleitoral,106187ebd5190ab987f828857a4cf46dw2n2iqbz.html
+2025-09-20 01:08:37,749 - INFO - Matched Keywords: tarifas
+2025-09-20 01:08:37,750 - INFO - Description: Temer sugere que Trump pode fortalecer Lula nas eleições de 2026, enfatizando a importância do diálogo entre os presidentes dos EUA e Brasil para tratar tarifas comerciais. Confira como essa dinâmica ...
+
+2025-09-20 01:08:37,750 - INFO - 🤖 AI Analysis requested for: https://www.terra.com.br/noticias/brasil/politica/temer-afirma-que-trump-pode-ajudar-lula-nas-eleicoes-de-2026-o-maior-cabo-eleitoral,106187ebd5190ab987f828857a4cf46dw2n2iqbz.html
+2025-09-20 01:08:37,750 - INFO - AI Analysis: AI analysis not yet implemented
+
+2025-09-20 01:08:37,750 - INFO - 📈 soy news alert - 2025-09-20 01:08:37
+2025-09-20 01:08:37,750 - INFO - 
+================================================================================
+2025-09-20 01:08:37,750 - INFO - ================================================================================
+2025-09-20 01:08:37,750 - INFO - Ticker: Brasil
+2025-09-20 01:08:37,750 - INFO - Title: 15% OFF: Mídia digital do Mario Kart World para Switch 2 entra em oferta no Mercado Livre
+2025-09-20 01:08:37,750 - INFO - Published: 2025-09-18T23:39:06Z
+2025-09-20 01:08:37,750 - INFO - URL: https://br.ign.com/descontos/146215/news/15-off-midia-digital-do-mario-kart-world-para-switch-2-entra-em-oferta-no-mercado-livre
+2025-09-20 01:08:37,750 - INFO - Matched Keywords: oferta
+2025-09-20 01:08:37,750 - INFO - Description: Acelere sua diversão: viva corridas emocionantes, pistas incríveis e personagens icônicos em Mario Kart World para Switch 2! Aproveite agora com desconto exclusivo
+Se você estava esperando o momento c...
+
+2025-09-20 01:08:37,750 - INFO - 🤖 AI Analysis requested for: https://br.ign.com/descontos/146215/news/15-off-midia-digital-do-mario-kart-world-para-switch-2-entra-em-oferta-no-mercado-livre
+2025-09-20 01:08:37,750 - INFO - AI Analysis: AI analysis not yet implemented
+
+2025-09-20 01:08:37,750 - INFO - 📈 soy news alert - 2025-09-20 01:08:37
+2025-09-20 01:08:37,750 - INFO - 
+================================================================================
+2025-09-20 01:08:37,750 - INFO - ================================================================================
+2025-09-20 01:08:37,750 - INFO - Ticker: Brasil
+2025-09-20 01:08:37,750 - INFO - Title: A China venceu e Montenegro foi a Pequim
+2025-09-20 01:08:37,750 - INFO - Published: 2025-09-18T23:19:18Z
+2025-09-20 01:08:37,750 - INFO - URL: https://observador.pt/opiniao/a-china-venceu-e-montenegro-foi-a-pequim/
+2025-09-20 01:08:37,750 - INFO - Matched Keywords: China
+2025-09-20 01:08:37,750 - INFO - Description: Não faz sentido – pela história, pela geografia, pela natureza do regime – Portugal alinhar com um bloco chinês. Mas é evidente que a generalidade dos países europeus está a procurar melhores relações
+
+2025-09-20 01:08:37,750 - INFO - 🤖 AI Analysis requested for: https://observador.pt/opiniao/a-china-venceu-e-montenegro-foi-a-pequim/
+2025-09-20 01:08:37,750 - INFO - AI Analysis: AI analysis not yet implemented
+
+2025-09-20 01:08:37,750 - INFO - Found 3 new relevant articles
+2025-09-20 01:09:07,755 - INFO - 🔍 Checking news for tickers: Brasil
+2025-09-20 01:09:07,954 - INFO - Found 20 total articles for Brasil
+2025-09-20 01:09:07,955 - INFO - Article: BBC perguntou 6 vezes a Lula se ele tentou ligar para Trump; veja o que o presidente respondeu
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Honor X9d 5G ganha data de lançamento e tem design revelado
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Mansões flutuantes levam luxo imobiliário ao alto-mar
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Presidente da EBC discute futuro da TV brasileira em especial dos 75 anos no Sem Censura
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: A&E e History - Destaques para o fim de semana (19 a 21/9)
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Fumaça de queimadas pode matar milhões por ano; entenda o risco
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: None
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: None
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Pressão 12 por 8 passa a ser considerada pré-hipertensão no Brasil
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Uber vai lançar entrega por drone nos EUA ainda em 2025
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Projeto inédito audiovisual traz Amaro Freitas, Ana Frango Elétrico e Vanessa Moreno se apresentando em espaços pouco convencionais do Sesc
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Lula se reunirá com Celso Sabino após União exigir saída do governo em 24 horas
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Autoridades prestigiam jantar do Instituto Vencer o Câncer no DF
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: 12 por 8 agora é pressão alta
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: GM e WEG fornecem carros elétricos e carregadores para a Presidência da República
+2025-09-20 01:09:07,955 - INFO - Matched keywords: []
+2025-09-20 01:09:07,955 - INFO - Article: Charlie Kirk
+2025-09-20 01:09:07,956 - INFO - Matched keywords: []
+2025-09-20 01:09:07,956 - INFO - Article: Lixo eletrônico representa riscos e exige soluções seguras
+2025-09-20 01:09:07,956 - INFO - Matched keywords: []
+2025-09-20 01:09:07,956 - INFO - No new relevant articles found
+2025-09-20 01:09:19,200 - INFO - 
+👋 Stopping Stock News Monitor...
+2025-09-20 01:09:19,200 - INFO - Monitor stopped by user

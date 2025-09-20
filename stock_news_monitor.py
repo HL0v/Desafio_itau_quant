@@ -12,13 +12,16 @@ from dataclasses import dataclass, field
 from typing import List, Set, Dict, Optional
 from newsapi import NewsApiClient
 import logging
+import apikeys
 
 # Configure logging
 logging.basicConfig(
+    filename='soy.log',
+    filemode='a',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
-logger = logging.getLogger(__name__)
+soy_logger = logging.getLogger('soy')
 
 @dataclass
 class NewsArticle:
@@ -26,96 +29,67 @@ class NewsArticle:
     title: str
     url: str
     published_at: str
+    description: str
     matched_keywords: List[str] = field(default_factory=list)
     ticker: Optional[str] = None
 
 @dataclass
 class MonitorConfig:
-    """Configuration for the news monitor."""
-    tickers: List[str]
-    api_key: str 
-    refresh_interval: int = 60
+    api_key: str = apikeys.news_api_key
+    refresh_interval: int = 30
     price_moving_keywords: List[str] = field(default_factory=lambda: [
-        """coringas"""
-        'commodities', 'biodiesel',
-        'biocombustíveis', 'estoques',
-        'produção', 'consumo',
-        'preço', 'preços',
 
+      #  """coringas"""
+       'commodities', 
 
-        """fatores naturais"""
+        'plantio', 'colheita',
+
+     #   """fatores naturais"""
         'clima', 'chuva',
         'seca', 'pragas',
-        'doenças',
+        'doenças', 'elninho',
+        'geada', 'temperatura',
+        'granizo', 'inundações',
+     
         
-        """fatores de estrito mercado"""
+       # """fatores de estrito mercado"""
         'oferta', 'demanda',
-        'dólar', 'câmbio',
-        'safra', 'exportação', 'importação',
-        'fundos de investimento', 'bolsa de Chicago',
-        'especulação','tick de soja', 
-        'cotação da soja',
 
-        """fatores geopolíticos"""
+        'safra', 'exportação', 'importação',
+
+        'especulação','tick de soja', 
+        'cotação da soja','contrato futuro soja',
+        
+
+        #"""fatores geopolíticos"""
         'Guerra', 'sanções',
         'China', 'guerra comercial', 
         'política agrícola', 'subsídios', 
+        'tarifas', 'acordo comercial',
+        
 
- 
     ])
 
-class NewsMonitor:
-    """Main class for monitoring stock-related news."""
-    
-    def __init__(self, config: MonitorConfig):
-        self.config = config
-        self.newsapi = NewsApiClient(api_key=config.api_key)
-        self.processed_articles: Set[str] = set()  # Track processed URLs
-        self.ticker_to_company: Dict[str, str] = self._build_ticker_mapping()
-        
+class NewsMonitor:  
     def _build_ticker_mapping(self) -> Dict[str, str]:
         """Build a mapping of tickers to company names for better search results."""
         # Basic mapping - could be extended with a comprehensive database
-        common_mappings = {
-            'FUT SJC': 'Futuro de soja na B3',
-            #'tick de soja':
-            #'preço da soja':'preço da soja', 
-            #'cotação da soja':
-            #'mercado futuro':'mercado futuro', 
-            #'sojaboi':'sojaboi', 
-            'CME':'CME Group', 
-            'NYSE':'NYSE indice composto', 
-            'B3':'Bolsa B3', 
-            'ADM':'Archer Daniels Midland', 
-            'CARG':'Cargill', 
-            'Bunge':'Bunge', 
-            'Louis Dreyfus':'Louis Dreyfus', 
-            'Amaggi':'Amaggi', 
-            'SLC Agrícola':'SLC Agrícola', 
-            'BrasilAgro':'BrasilAgro', 
-            'Viterra':'Viterra', 
-            'COFCO International':'COFCO International', 
-            'Syngenta':'Syngenta', 
-            'Bayer':'Bayer', 
-            'BASF':'BASF', 
-            'Mosaic':'Mosaic', 
-            'Nutrien':'Nutrien',
-            'ILPF':'relacao de preco soja e boi'
+        return {
+            
+            'Brasil' : 'comercio de soja'
         }
-        
         # Return mapping for requested tickers
-        return {ticker: common_mappings.get(ticker, ticker) 
-                for ticker in self.config.tickers}
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
-        handlers={
-            logging.FileHandler('stock_monitor.log'),
-            logging.StreamHandler()  # keep console output
-        }
-    )
+        
+    def __init__(self, config: MonitorConfig):
+        self.config = config
+        self.newsapi = NewsApiClient(api_key=config.api_key)
+        self.processed_articles: Set[str] = set()
+        self.ticker_to_company = self._build_ticker_mapping()
+        # Set tickers from the mapping
+        self.config.tickers = list(self.ticker_to_company.keys())
+    
 
-    logger = logging.getLogger(__name__)
+    
 
     def _build_search_query(self, ticker: str) -> str:
         """Build search query for a specific ticker."""
@@ -144,16 +118,16 @@ class NewsMonitor:
         """Fetch news articles for a specific ticker."""
         try:
             query = self._build_search_query(ticker)
-            logger.debug(f"Searching for ticker {ticker} with query: {query}")
+            soy_logger.debug(f"Searching for ticker {ticker} with query: {query}")
 
-            # Search for articles from the last 7 days
+            # Search for articles from the last 14 days
             end_date = datetime.now()
-            start_date = end_date - timedelta(days=7)
+            start_date = end_date - timedelta(days=14)
             
 
             articles = self.newsapi.get_everything(
                 q=query,
-                language='en',
+                language='pt',
                 sort_by='publishedAt',
                 from_param=start_date.strftime("%Y-%m-%d"),
                 to=end_date.strftime('%Y-%m-%d'),
@@ -161,7 +135,7 @@ class NewsMonitor:
             )
             
               # Add debug logging for API response
-            logger.info(f"Found {len(articles.get('articles', []))} total articles for {ticker}")
+            soy_logger.info(f"Found {len(articles.get('articles', []))} total articles for {ticker}")
 
             news_articles = []
             
@@ -174,7 +148,6 @@ class NewsMonitor:
                     title=article.get('title', 'No title'),
                     url=article['url'],
                     published_at=article.get('publishedAt', ''),
-                    source=article.get('source', {}).get('name', 'Unknown'),
                     description=article.get('description', ''),
                     matched_keywords=[],  # We'll fill this later
                     ticker=ticker
@@ -185,8 +158,8 @@ class NewsMonitor:
                 matched_keywords = self._extract_matched_keywords(article_text)
 
                 # Debug log for keyword matching
-                logger.info(f"Article: {news_article.title}")
-                logger.info(f"Matched keywords: {matched_keywords}")
+                soy_logger.info(f"Article: {news_article.title}")
+                soy_logger.info(f"Matched keywords: {matched_keywords}")
                 
                 # Only include articles with matched keywords
                 news_article.matched_keywords = matched_keywords
@@ -197,7 +170,7 @@ class NewsMonitor:
             return news_articles
             
         except Exception as e:
-            logger.error(f"Error fetching news for {ticker}: {e}")
+            soy_logger.error(f"Error fetching news for {ticker}: {e}")
             return []
     
     def analyze_with_ai(self, url: str) -> Dict:
@@ -207,7 +180,7 @@ class NewsMonitor:
         """
         # TODO: Implement actual AI analysis
         # This could integrate with OpenAI, Claude, or other AI services
-        logger.info(f"🤖 AI Analysis requested for: {url}")
+        soy_logger.info(f"🤖 AI Analysis requested for: {url}")
         
         return {
             "sentiment": "neutral",
@@ -219,38 +192,32 @@ class NewsMonitor:
     def process_article(self, article: NewsArticle) -> None:
         """Process a single article - print details and trigger AI analysis."""
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-
-        with open("articles.log", "a", encoding="utf-8") as file:
-            file.write(f"📈 STOCK NEWS ALERT - {timestamp}")
-            file.write(f"\n{'='*80}")
-            file.write(f"{'='*80}")
-            file.write(f"Ticker: {article.ticker}")
-            file.write(f"Title: {article.title}")
-            file.write(f"Source: {article.source}")
-            file.write(f"Published: {article.published_at}")
-            file.write(f"URL: {article.url}")
-            file.write(f"Matched Keywords: {', '.join(article.matched_keywords)}")
+        soy_logger.info(f"📈 soy news alert - {timestamp}")
+        soy_logger.info(f"\n{'='*80}")
+        soy_logger.info(f"{'='*80}")
+        soy_logger.info(f"Ticker: {article.ticker}")
+        soy_logger.info(f"Title: {article.title}")
+        soy_logger.info(f"Published: {article.published_at}")
+        soy_logger.info(f"URL: {article.url}")
+        soy_logger.info(f"Matched Keywords: {', '.join(article.matched_keywords)}")
 
         if article.description:
             desc = str(article.description)
             truncated_desc = desc[:200] + "..." if len(desc) > 200 else desc
-            with open("articles.log", "a", encoding="utf-8") as file:
-                file.write(f"Description: {truncated_desc}\n")
+            soy_logger.info(f"Description: {truncated_desc}\n")
         
         # Trigger AI analysis
         try:
             ai_result = self.analyze_with_ai(article.url)
-            with open("articles.log", "a", encoding="utf-8") as file:
-                file.write(f"AI Analysis: {ai_result.get('summary', 'No summary available')}\n")
+            soy_logger.info(f"AI Analysis: {ai_result.get('summary', 'No summary available')}\n")
         except Exception as e:
-            logger.error(f"Error in AI analysis: {e}")
-            with open("articles.log", "a", encoding="utf-8") as file:
-                file.write(f"{'='*80}\n")
-        
-    
+            soy_logger.error(f"Error in AI analysis: {e}")
+            soy_logger.info(f"{'='*80}\n")
+
+
     def check_news(self) -> None:
         """Check news for all configured tickers."""
-        logger.info(f"🔍 Checking news for tickers: {', '.join(self.config.tickers)}")
+        soy_logger.info(f"🔍 Checking news for tickers: {', '.join(self.config.tickers)}")
         
         total_articles = 0
         
@@ -262,19 +229,18 @@ class NewsMonitor:
                 total_articles += 1
         
         if total_articles == 0:
-            logger.info("No new relevant articles found")
+            soy_logger.info("No new relevant articles found")
         else:
-            logger.info(f"Found {total_articles} new relevant articles")
+            soy_logger.info(f"Found {total_articles} new relevant articles")
     
     def start_monitoring(self) -> None:
         """Start the continuous monitoring process."""
-        with open("articles.log", "a", encoding="utf-8") as file:
-            file.write(f"\n\n🚀 Starting Stock News Monitor\n")
-            file.write(f"Monitoring tickers: {', '.join(self.config.tickers)}\n")
-            file.write(f"Refresh interval: {self.config.refresh_interval} seconds\n")
-            file.write(f"Keywords: {', '.join(self.config.price_moving_keywords[:5])}... (+{len(self.config.price_moving_keywords)-5} more)\n")
-            file.write("Press Ctrl+C to stop\n")
-            file.write(f"{'='*80}\n")
+        soy_logger.info(f"\n\n🚀 Starting Soy News Monitor\n")
+        soy_logger.info(f"Monitoring tickers: {', '.join(self.config.tickers)}\n")
+        soy_logger.info(f"Refresh interval: {self.config.refresh_interval} seconds\n")
+        soy_logger.info(f"Keywords: {', '.join(self.config.price_moving_keywords[:5])}... (+{len(self.config.price_moving_keywords)-5} more)\n")
+        soy_logger.info("Press Ctrl+C to stop\n")
+        soy_logger.info(f"{'='*80}\n")
         
         
         # Schedule the job
@@ -289,43 +255,27 @@ class NewsMonitor:
                 schedule.run_pending()
                 time.sleep(1)
         except KeyboardInterrupt:
-            with open("articles.log", "a", encoding="utf-8") as file:
-                file.write("\n👋 Stopping Stock News Monitor...")
-            logger.info("Monitor stopped by user")
+            soy_logger.info("\n👋 Stopping Stock News Monitor...")
+            soy_logger.info("Monitor stopped by user")
 
 def main():
     """Main entry point."""
-    parser = argparse.ArgumentParser(description='Monitor stock news for price-moving events')
-    parser.add_argument(
-        'tickers',
-        nargs='+',
-        help='monitor news for Apple, Google, and Microsoft stocks, ' \
-        'checking every 5 minutes (300 seconds)'
-    )
-    parser.add_argument(
-        '--api-key',
-        required=True,
-        help='c99a829bc5664f3abfd5905d54caf02e'
-    )
-    parser.add_argument(
+    reqs = argparse.ArgumentParser(description='Monitor stock news for \
+                                   price-moving events')
+    reqs.add_argument(
         '--interval',
         type=int,
-        default=60,
-        help='Refresh interval in seconds (default: 60)'
+        default=30,
+        help='Refresh interval in seconds (default: 30)'
     )
-    
-    args = parser.parse_args()
-    
-    # Convert tickers to uppercase
-    tickers = [ticker.upper() for ticker in args.tickers]
+
+    init_reqs = reqs.parse_args()
     
     # Create configuration
-    config = MonitorConfig(
-        tickers=tickers,
-        api_key=args.api_key,
-        refresh_interval=args.interval
+    config =  MonitorConfig(
+        api_key= apikeys.news_api_key,
+        refresh_interval=init_reqs.interval
     )
-    
     # Create and start monitor
     monitor = NewsMonitor(config)
     monitor.start_monitoring()
