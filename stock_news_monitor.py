@@ -4,6 +4,7 @@ import schedule
 from datetime import datetime, timedelta
 from dataclasses import dataclass, field
 from typing import List, Set, Dict, Optional
+import typings
 from newsapi import NewsApiClient
 import logging
 import apikeys
@@ -49,6 +50,7 @@ class NewsArticle:
 class MonitorConfig:
     api_key: str = apikeys.news_api_key
     refresh_interval: int = 30
+    tickers: List[str] = field(default_factory=list)
     price_moving_keywords: List[str] = field(default_factory=lambda: [
 
       #  """coringas"""
@@ -82,7 +84,7 @@ class MonitorConfig:
 
     ])
 
-class NewsMonitor:  
+class NewsMonitor:
     def _build_ticker_mapping(self) -> Dict[str, str]:
         """Build a mapping of tickers to company names for better search results."""
         # Basic mapping - could be extended with a comprehensive database
@@ -198,6 +200,8 @@ class NewsMonitor:
     
     def analyze_with_ai(self, url: str) -> Dict[str, Any]:
         gemini_logger.info(f"AI analysis requested for: {url}")
+        ai_response = None
+        response_text = None
 
         try:
             #scraping article text
@@ -245,11 +249,11 @@ class NewsMonitor:
             return analysis_data
         except requests.exceptions.RequestException as e:
             gemini_logger.error(f"failed to fetch : {url}: {e}")
-            return {"error: " f"Failed to fetch URL: {e}"}
+            return {"error": f"Failed to fetch URL: {e}"}
         except json.JSONDecodeError as e:
             gemini_logger.error(f"Failed to parse JSON from AI response for {url}: {e}")
-            gemini_logger.error(f"Raw response was: {ai_response.text}")
-            return{"error": f"AI returned invalid JSON: {e}"}
+            gemini_logger.error(f"Raw response was: {response_text}")
+            return {"error": f"AI returned invalid JSON: {e}"}
         except Exception as e:
             gemini_logger.error(f"An unexpected error occurred during AI analysis for {url}: {e}")
             return {"error": f"An unexpected error ocurred: {e}"}
@@ -300,7 +304,7 @@ class NewsMonitor:
     
     def start_monitoring(self) -> None:
         """Start the continuous monitoring process."""
-        soy_logger.info(f"\n\nEyes opened\n")
+        soy_logger.info("\n\nEyes opened\n")
         soy_logger.info(f"Looking for triggers: {', '.join(self.config.tickers)}\n")
         soy_logger.info(f"Refresh interval: {self.config.refresh_interval} seconds\n")
         soy_logger.info(f"Keywords: {', '.join(self.config.price_moving_keywords[:5])}... (+{len(self.config.price_moving_keywords)-5} more)\n")

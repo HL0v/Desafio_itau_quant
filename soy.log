@@ -4005,3 +4005,227 @@ The post Guerra comercial de Trump e China cria oportunidades, mas ameaça...
 2025-10-17 16:17:43,211 - INFO - Description: Donald Trump declara guerra comercial à China em meio a retaliações por soja e tarifas de 100% sobre produtos chineses
 
 2025-10-17 16:17:43,211 - INFO - AI analysis requested for: https://www.metropoles.com/mundo/trump-eua-guerra-comercial-china
+2025-10-17 18:21:43,456 - INFO - 
+
+Eyes opened
+
+2025-10-17 18:21:43,458 - INFO - Looking for triggers: Brasil, soja, B3, plantação de soja, colheita de soja, preço da soja, contrato futuro de soja, exportação de soja, importação de soja, mercado de soja, commodities agrícolas, clima para soja
+
+2025-10-17 18:21:43,458 - INFO - Refresh interval: 300 seconds
+
+2025-10-17 18:21:43,458 - INFO - Keywords: commodities, plantio, colheita, clima, chuva... (+25 more)
+
+2025-10-17 18:21:43,458 - INFO - Press Ctrl+C to stop
+
+2025-10-17 18:21:43,458 - INFO - ================================================================================
+
+2025-10-17 18:21:43,458 - INFO - Searching triggers: Brasil, soja, B3, plantação de soja, colheita de soja, preço da soja, contrato futuro de soja, exportação de soja, importação de soja, mercado de soja, commodities agrícolas, clima para soja
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for Brasil: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for soja: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for B3: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for plantação de soja: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for colheita de soja: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for preço da soja: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for contrato futuro de soja: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for exportação de soja: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for importação de soja: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for mercado de soja: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for commodities agrícolas: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - ERROR - Error fetching news for clima para soja: 'str' object has no attribute 'get_everything'
+2025-10-17 18:21:43,458 - INFO - No new relevant articles found
+2025-10-17 18:22:39,071 - INFO - 
+Closing eyes
+
+2025-10-17 18:22:39,071 - INFO - Eyes closed
+
+2025-10-17 18:23:21,702 - INFO - 
+
+Eyes opened
+
+2025-10-17 18:23:21,702 - INFO - Looking for triggers: Brasil, soja, B3, plantação de soja, colheita de soja, preço da soja, contrato futuro de soja, exportação de soja, importação de soja, mercado de soja, commodities agrícolas, clima para soja
+
+2025-10-17 18:23:21,702 - INFO - Refresh interval: 300 seconds
+
+2025-10-17 18:23:21,702 - INFO - Keywords: commodities, plantio, colheita, clima, chuva... (+25 more)
+
+2025-10-17 18:23:21,702 - INFO - Press Ctrl+C to stop
+
+2025-10-17 18:23:21,702 - INFO - ================================================================================
+
+2025-10-17 18:23:21,702 - INFO - Searching triggers: Brasil, soja, B3, plantação de soja, colheita de soja, preço da soja, contrato futuro de soja, exportação de soja, importação de soja, mercado de soja, commodities agrícolas, clima para soja
+2025-10-17 18:23:22,380 - INFO - Found 20 total articles for Brasil
+2025-10-17 18:23:22,381 - INFO - Article: Brasil e EUA iniciaram diálogo sobre tarifas comerciais, diz Secom
+2025-10-17 18:23:22,381 - INFO - Matched keywords: ['tarifas']
+2025-10-17 18:23:22,381 - INFO - Article: Prisões domiciliares crescem 4000%; Congresso atua para regulamentar
+2025-10-17 18:23:22,381 - INFO - Matched keywords: []
+2025-10-17 18:23:22,381 - INFO - Article: Vieira diz que Trump e Lula devem se encontrar: ''Há interesse''
+2025-10-17 18:23:22,381 - INFO - Matched keywords: []
+2025-10-17 18:23:22,381 - INFO - Article: Abandonado por Trump, Bolsonaro não é mencionado em encontro na Casa Branca
+2025-10-17 18:23:22,381 - INFO - Matched keywords: []
+2025-10-17 18:23:22,381 - INFO - Article: Como são feitos os elaborados labirintos em milharais?
+2025-10-17 18:23:22,381 - INFO - Matched keywords: []
+2025-10-17 18:23:22,381 - INFO - Article: Chefe militar dos EUA na América Latina deixa o cargo após tensões com Maduro
+2025-10-17 18:23:22,381 - INFO - Matched keywords: ['Guerra']
+2025-10-17 18:23:22,381 - INFO - Article: Diretor da Aneel alerta para situação ‘extremamente perigosa’ no sistema elétrico
+2025-10-17 18:23:22,381 - INFO - Matched keywords: []
+2025-10-17 18:23:22,381 - INFO - Article: Mauro Vieira e Marco Rubio se reúnem na Casa Branca
+2025-10-17 18:23:22,381 - INFO - Matched keywords: []
+2025-10-17 18:23:22,381 - INFO - Article: Adeus, Papanicolau: como funciona o novo teste de HPV no SUS
+2025-10-17 18:23:22,381 - INFO - Matched keywords: []
+2025-10-17 18:23:22,381 - INFO - Article: Ibovespa mantém dinâmica de correção de outubro e fecha em queda de 0,28%
+2025-10-17 18:23:22,381 - INFO - Matched keywords: []
+2025-10-17 18:23:22,381 - INFO - Article: Como foi a conversa entre Mauro Vieira e Marco Rubio na Casa Branca
+2025-10-17 18:23:22,381 - INFO - Matched keywords: []
+2025-10-17 18:23:22,382 - INFO - Article: "A Queda do Céu" estreia no Brasil no dia 20 de novembro e revela trailer e novo cartaz
+2025-10-17 18:23:22,382 - INFO - Matched keywords: []
+2025-10-17 18:23:22,382 - INFO - Article: Termina reunião de chanceler brasileiro e Marco Rubio para discutir tarifas dos EUA
+2025-10-17 18:23:22,382 - INFO - Matched keywords: ['tarifas']
+2025-10-17 18:23:22,382 - INFO - Article: Ibovespa fecha em queda com piora no exterior e sem apoio de Petrobras e Vale
+2025-10-17 18:23:22,382 - INFO - Matched keywords: []
+2025-10-17 18:23:22,382 - INFO - Article: Dólar e Bolsa caem em dia de disparada do “índice do medo” nos EUA
+2025-10-17 18:23:22,382 - INFO - Matched keywords: []
+2025-10-17 18:23:22,382 - INFO - Article: Mauro Vieira e Marco Rubio se reúnem por cerca de 1 hora na Casa Branca
+2025-10-17 18:23:22,382 - INFO - Matched keywords: []
+2025-10-17 18:23:22,382 - INFO - Article: O que dizem Gracyanne Barbosa e João Vicente de Castro sobre affair
+2025-10-17 18:23:22,382 - INFO - Matched keywords: []
+2025-10-17 18:23:22,382 - INFO - Article: PlayStation 5 Edição Limitada do Ghost of Yotei cai de preço na Amazon Brasil
+2025-10-17 18:23:22,382 - INFO - Matched keywords: []
+2025-10-17 18:23:22,382 - INFO - Article: Reddit lança ferramenta com IA no Brasil para responder dúvidas com base em conversas reais
+2025-10-17 18:23:22,382 - INFO - Matched keywords: []
+2025-10-17 18:23:22,382 - INFO - Article: Veja como a alimentação pode atuar contra o câncer de estômago
+2025-10-17 18:23:22,382 - INFO - Matched keywords: []
+2025-10-17 18:23:22,382 - INFO - Article found - 2025-10-17 18:23:22
+2025-10-17 18:23:22,382 - INFO - 
+================================================================================
+2025-10-17 18:23:22,382 - INFO - ================================================================================
+2025-10-17 18:23:22,382 - INFO - Trigger Word: Brasil
+2025-10-17 18:23:22,382 - INFO - Title: Brasil e EUA iniciaram diálogo sobre tarifas comerciais, diz Secom
+2025-10-17 18:23:22,382 - INFO - Published: 2025-10-16T21:22:19Z
+2025-10-17 18:23:22,382 - INFO - URL: https://www.metropoles.com/brasil/brasil-e-eua-iniciaram-dialogo-sobre-tarifas-comerciais-diz-secom
+2025-10-17 18:23:22,382 - INFO - Tokens: tarifas
+2025-10-17 18:23:22,382 - INFO - Description: Encontro entre Mauro Vieira e Marco Rubio marca reaproximação após críticas de Trump. Sidônio Palmeira cita “firmeza na soberania"
+
+2025-10-17 18:23:22,382 - INFO - AI analysis requested for: https://www.metropoles.com/brasil/brasil-e-eua-iniciaram-dialogo-sobre-tarifas-comerciais-diz-secom
+2025-10-17 18:23:33,909 - INFO - AI analysis for: https://www.metropoles.com/brasil/brasil-e-eua-iniciaram-dialogo-sobre-tarifas-comerciais-diz-secom
+2025-10-17 18:23:33,909 - ERROR - An unexpected error occurred during AI analysis for https://www.metropoles.com/brasil/brasil-e-eua-iniciaram-dialogo-sobre-tarifas-comerciais-diz-secom: must have exactly one of create/read/write/append mode
+2025-10-17 18:23:33,910 - INFO - AI Analysis: No summary available
+
+2025-10-17 18:23:33,911 - INFO - Article found - 2025-10-17 18:23:33
+2025-10-17 18:23:33,911 - INFO - 
+================================================================================
+2025-10-17 18:23:33,911 - INFO - ================================================================================
+2025-10-17 18:23:33,911 - INFO - Trigger Word: Brasil
+2025-10-17 18:23:33,911 - INFO - Title: Chefe militar dos EUA na América Latina deixa o cargo após tensões com Maduro
+2025-10-17 18:23:33,911 - INFO - Published: 2025-10-16T21:19:00Z
+2025-10-17 18:23:33,911 - INFO - URL: https://www.diariodocentrodomundo.com.br/chefe-militar-dos-eua-na-america-latina-deixa-o-cargo-apos-tensoes-com-maduro/
+2025-10-17 18:23:33,911 - INFO - Tokens: Guerra
+2025-10-17 18:23:33,911 - INFO - Description: O almirante Alvin Holsey, responsável pelas operações militares dos Estados Unidos na América Latina, anunciou que deixará o comando do Comando Sul (Southcom) no fim do ano. A decisão foi confirmada n...
+
+2025-10-17 18:23:33,911 - INFO - AI analysis requested for: https://www.diariodocentrodomundo.com.br/chefe-militar-dos-eua-na-america-latina-deixa-o-cargo-apos-tensoes-com-maduro/
+2025-10-17 18:23:35,014 - ERROR - failed to fetch : https://www.diariodocentrodomundo.com.br/chefe-militar-dos-eua-na-america-latina-deixa-o-cargo-apos-tensoes-com-maduro/: 403 Client Error: Forbidden for url: https://www.diariodocentrodomundo.com.br/chefe-militar-dos-eua-na-america-latina-deixa-o-cargo-apos-tensoes-com-maduro/
+2025-10-17 18:23:35,015 - ERROR - Error in AI analysis: 'set' object has no attribute 'get'
+2025-10-17 18:23:35,016 - INFO - ================================================================================
+
+2025-10-17 18:23:35,016 - INFO - Article found - 2025-10-17 18:23:35
+2025-10-17 18:23:35,016 - INFO - 
+================================================================================
+2025-10-17 18:23:35,016 - INFO - ================================================================================
+2025-10-17 18:23:35,016 - INFO - Trigger Word: Brasil
+2025-10-17 18:23:35,016 - INFO - Title: Termina reunião de chanceler brasileiro e Marco Rubio para discutir tarifas dos EUA
+2025-10-17 18:23:35,016 - INFO - Published: 2025-10-16T20:36:48Z
+2025-10-17 18:23:35,016 - INFO - URL: https://valor.globo.com/brasil/noticia/2025/10/16/termina-reuniao-de-chanceler-brasileiro-e-marco-rubio-para-discutir-tarifas-dos-eua.ghtml
+2025-10-17 18:23:35,016 - INFO - Tokens: tarifas
+2025-10-17 18:23:35,016 - INFO - Description: Um integrante do governo brasileiro classificou o encontro como muito bom
+
+2025-10-17 18:23:35,016 - INFO - AI analysis requested for: https://valor.globo.com/brasil/noticia/2025/10/16/termina-reuniao-de-chanceler-brasileiro-e-marco-rubio-para-discutir-tarifas-dos-eua.ghtml
+2025-10-17 18:23:57,485 - INFO - AI analysis for: https://valor.globo.com/brasil/noticia/2025/10/16/termina-reuniao-de-chanceler-brasileiro-e-marco-rubio-para-discutir-tarifas-dos-eua.ghtml
+2025-10-17 18:23:57,485 - ERROR - An unexpected error occurred during AI analysis for https://valor.globo.com/brasil/noticia/2025/10/16/termina-reuniao-de-chanceler-brasileiro-e-marco-rubio-para-discutir-tarifas-dos-eua.ghtml: must have exactly one of create/read/write/append mode
+2025-10-17 18:23:57,486 - INFO - AI Analysis: No summary available
+
+2025-10-17 18:23:57,763 - INFO - Found 20 total articles for soja
+2025-10-17 18:23:57,763 - INFO - Article: Direito de preferência na renovação de contratos agrários e condição ‘tanto por tanto’
+2025-10-17 18:23:57,763 - INFO - Matched keywords: []
+2025-10-17 18:23:57,764 - INFO - Article: Pare de comprar velas caras e faça as suas com cascas de laranja
+2025-10-17 18:23:57,764 - INFO - Matched keywords: []
+2025-10-17 18:23:57,764 - INFO - Article: China adia compras de soja devido a altos prêmios do Brasil, dizem traders
+2025-10-17 18:23:57,764 - INFO - Matched keywords: ['Guerra', 'China', 'guerra comercial']
+2025-10-17 18:23:57,764 - INFO - Article: Peso econômico do Brasil pode levar Trump a buscar solução pragmática para tarifas, diz pesquisador
+2025-10-17 18:23:57,764 - INFO - Matched keywords: ['tarifas']
+2025-10-17 18:23:57,764 - INFO - Article: Guerra comercial de Trump e China cria oportunidades, mas ameaça ambiente do Brasil
+2025-10-17 18:23:57,764 - INFO - Matched keywords: ['Guerra', 'China', 'guerra comercial']
+2025-10-17 18:23:57,764 - INFO - Article: Lavrov sinaliza negociações estratégicas entre Rússia, EUA e China
+2025-10-17 18:23:57,764 - INFO - Matched keywords: ['Guerra', 'China', 'guerra comercial']
+2025-10-17 18:23:57,764 - INFO - Article: Trump afirma que EUA está em “guerra comercial” com a China
+2025-10-17 18:23:57,764 - INFO - Matched keywords: ['Guerra', 'China', 'guerra comercial', 'tarifas']
+2025-10-17 18:23:57,764 - INFO - Article: Por que interessa a Trump resgatar agora o governo Milei na Argentina
+2025-10-17 18:23:57,764 - INFO - Matched keywords: []
+2025-10-17 18:23:57,764 - INFO - Article: Em meio à crise com EUA, China condena ataque a barco venezuelano
+2025-10-17 18:23:57,764 - INFO - Matched keywords: ['China']
+2025-10-17 18:23:57,764 - INFO - Article: EUA acusam Pequim de boicote por recusar soja: “China contra o mundo”
+2025-10-17 18:23:57,764 - INFO - Matched keywords: ['importação', 'China']
+2025-10-17 18:23:57,764 - INFO - Article: ONG denuncia devastação em estado que acolhe COP30
+2025-10-17 18:23:57,764 - INFO - Matched keywords: []
+2025-10-17 18:23:57,764 - INFO - Article: Manoa REDD+: como uma fazenda em Rondônia prova que é possível lucrar preservando a Amazônia
+2025-10-17 18:23:57,764 - INFO - Matched keywords: []
+2025-10-17 18:23:57,764 - INFO - Article: Bolsas de NY avançam guiadas por temporada de balanços e Powell mais inclinado a corte de juros
+2025-10-17 18:23:57,764 - INFO - Matched keywords: []
+2025-10-17 18:23:57,764 - INFO - Article: Trump está disposto a se encontrar com Xi, diz Bessent
+2025-10-17 18:23:57,764 - INFO - Matched keywords: []
+2025-10-17 18:23:57,764 - INFO - Article: ARTIGO: Rios de Pó na Amazônia, a guerra invisível que desafia a soberania brasileira
+2025-10-17 18:23:57,764 - INFO - Matched keywords: ['Guerra']
+2025-10-17 18:23:57,764 - INFO - Article: COP30 em Belém coloca Lula em posição constrangedora, diz o New York Times
+2025-10-17 18:23:57,764 - INFO - Matched keywords: ['Guerra', 'China', 'guerra comercial']
+2025-10-17 18:23:57,765 - INFO - Article: Ibovespa Futuro sobe com aumento do apetite a risco após Powell; BC fica no radar
+2025-10-17 18:23:57,765 - INFO - Matched keywords: []
+2025-10-17 18:23:57,765 - INFO - Article: Livro Bege, falas do Fed e BC, vendas no varejo e mais destaques da agenda desta 4ª
+2025-10-17 18:23:57,765 - INFO - Matched keywords: []
+2025-10-17 18:23:57,765 - INFO - Article: Dow Jones Futuro sobe com corte de juros e temporada de balanços em foco
+2025-10-17 18:23:57,765 - INFO - Matched keywords: []
+2025-10-17 18:23:57,765 - INFO - Article: The AgriBiz: Os caminhos da Brado para garantir novos destinos para o algodão
+2025-10-17 18:23:57,765 - INFO - Matched keywords: ['China']
+2025-10-17 18:23:57,765 - INFO - Article found - 2025-10-17 18:23:57
+2025-10-17 18:23:57,765 - INFO - 
+================================================================================
+2025-10-17 18:23:57,765 - INFO - ================================================================================
+2025-10-17 18:23:57,765 - INFO - Trigger Word: soja
+2025-10-17 18:23:57,765 - INFO - Title: China adia compras de soja devido a altos prêmios do Brasil, dizem traders
+2025-10-17 18:23:57,765 - INFO - Published: 2025-10-16T11:39:42Z
+2025-10-17 18:23:57,765 - INFO - URL: https://www.infomoney.com.br/mercados/china-adia-compras-de-soja-devido-a-altos-premios-do-brasil-dizem-traders/
+2025-10-17 18:23:57,765 - INFO - Tokens: Guerra, China, guerra comercial
+2025-10-17 18:23:57,765 - INFO - Description: "A China não está comprando grão dos EUA por causa da guerra comercial e a soja brasileira está muito cara", disse um trader de oleaginosa
+The post China adia compras de soja devido a altos prêmios do...
+
+2025-10-17 18:23:57,765 - INFO - AI analysis requested for: https://www.infomoney.com.br/mercados/china-adia-compras-de-soja-devido-a-altos-premios-do-brasil-dizem-traders/
+2025-10-17 18:24:10,556 - INFO - AI analysis for: https://www.infomoney.com.br/mercados/china-adia-compras-de-soja-devido-a-altos-premios-do-brasil-dizem-traders/
+2025-10-17 18:24:10,556 - ERROR - An unexpected error occurred during AI analysis for https://www.infomoney.com.br/mercados/china-adia-compras-de-soja-devido-a-altos-premios-do-brasil-dizem-traders/: must have exactly one of create/read/write/append mode
+2025-10-17 18:24:10,557 - INFO - AI Analysis: No summary available
+
+2025-10-17 18:24:10,557 - INFO - Article found - 2025-10-17 18:24:10
+2025-10-17 18:24:10,557 - INFO - 
+================================================================================
+2025-10-17 18:24:10,558 - INFO - ================================================================================
+2025-10-17 18:24:10,558 - INFO - Trigger Word: soja
+2025-10-17 18:24:10,558 - INFO - Title: Peso econômico do Brasil pode levar Trump a buscar solução pragmática para tarifas, diz pesquisador
+2025-10-17 18:24:10,558 - INFO - Published: 2025-10-16T08:55:19Z
+2025-10-17 18:24:10,558 - INFO - URL: https://www.terra.com.br/noticias/mundo/america-latina/peso-economico-do-brasil-pode-levar-trump-a-buscar-solucao-pragmatica-para-tarifas-diz-pesquisador,ac79e4e3f57b48579a9800babaf34a7ap7gx2eu5.html
+2025-10-17 18:24:10,558 - INFO - Tokens: tarifas
+2025-10-17 18:24:10,558 - INFO - Description: O chanceler Mauro Vieira se reúne nesta quinta-feira (16), em Washington, com o secretário de Estado dos Estados Unidos, Marco Rubio. O encontro é visto pelo Itamaraty como uma oportunidade para insis...
+
+2025-10-17 18:24:10,558 - INFO - AI analysis requested for: https://www.terra.com.br/noticias/mundo/america-latina/peso-economico-do-brasil-pode-levar-trump-a-buscar-solucao-pragmatica-para-tarifas-diz-pesquisador,ac79e4e3f57b48579a9800babaf34a7ap7gx2eu5.html
+2025-10-17 18:24:33,362 - INFO - AI analysis for: https://www.terra.com.br/noticias/mundo/america-latina/peso-economico-do-brasil-pode-levar-trump-a-buscar-solucao-pragmatica-para-tarifas-diz-pesquisador,ac79e4e3f57b48579a9800babaf34a7ap7gx2eu5.html
+2025-10-17 18:24:33,362 - ERROR - An unexpected error occurred during AI analysis for https://www.terra.com.br/noticias/mundo/america-latina/peso-economico-do-brasil-pode-levar-trump-a-buscar-solucao-pragmatica-para-tarifas-diz-pesquisador,ac79e4e3f57b48579a9800babaf34a7ap7gx2eu5.html: must have exactly one of create/read/write/append mode
+2025-10-17 18:24:33,363 - INFO - AI Analysis: No summary available
+
+2025-10-17 18:24:33,363 - INFO - Article found - 2025-10-17 18:24:33
+2025-10-17 18:24:33,363 - INFO - 
+================================================================================
+2025-10-17 18:24:33,363 - INFO - ================================================================================
+2025-10-17 18:24:33,363 - INFO - Trigger Word: soja
+2025-10-17 18:24:33,363 - INFO - Title: Guerra comercial de Trump e China cria oportunidades, mas ameaça ambiente do Brasil
+2025-10-17 18:24:33,363 - INFO - Published: 2025-10-16T08:00:00Z
+2025-10-17 18:24:33,363 - INFO - URL: https://www.infomoney.com.br/business/global/guerra-comercial-de-trump-e-china-cria-oportunidades-mas-ameaca-ambiente-do-brasil/
+2025-10-17 18:24:33,363 - INFO - Tokens: Guerra, China, guerra comercial
+2025-10-17 18:24:33,363 - INFO - Description: A soja está no meio de uma confusão geopolítica que abrange três continentes e ameaça devorar a maior savana tropical do mundo
+The post Guerra comercial de Trump e China cria oportunidades, mas ameaça...
+
+2025-10-17 18:24:33,363 - INFO - AI analysis requested for: https://www.infomoney.com.br/business/global/guerra-comercial-de-trump-e-china-cria-oportunidades-mas-ameaca-ambiente-do-brasil/

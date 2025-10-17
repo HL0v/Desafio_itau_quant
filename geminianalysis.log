@@ -472,3 +472,29 @@ AI analysis for: https://www.metropoles.com/mundo/lavrov-russia-eua-china
 AI Analysis: Sergey Lavrov signals Russia's openness to strategic stability talks with the US and China amidst escalating US-China trade tensions. The article highlights a deepening "trade war" where the US announced 100% tariffs on Chinese goods. China retaliated by suspending US soybean purchases, a measure explicitly stated to strongly affect the American agricultural sector.
 
 AI analysis requested for: https://www.metropoles.com/mundo/trump-eua-guerra-comercial-china
+AI analysis requested for: https://www.metropoles.com/brasil/brasil-e-eua-iniciaram-dialogo-sobre-tarifas-comerciais-diz-secom
+AI analysis for: https://www.metropoles.com/brasil/brasil-e-eua-iniciaram-dialogo-sobre-tarifas-comerciais-diz-secom
+An unexpected error occurred during AI analysis for https://www.metropoles.com/brasil/brasil-e-eua-iniciaram-dialogo-sobre-tarifas-comerciais-diz-secom: must have exactly one of create/read/write/append mode
+AI Analysis: No summary available
+
+AI analysis requested for: https://www.diariodocentrodomundo.com.br/chefe-militar-dos-eua-na-america-latina-deixa-o-cargo-apos-tensoes-com-maduro/
+failed to fetch : https://www.diariodocentrodomundo.com.br/chefe-militar-dos-eua-na-america-latina-deixa-o-cargo-apos-tensoes-com-maduro/: 403 Client Error: Forbidden for url: https://www.diariodocentrodomundo.com.br/chefe-militar-dos-eua-na-america-latina-deixa-o-cargo-apos-tensoes-com-maduro/
+Error in AI analysis: 'set' object has no attribute 'get'
+================================================================================
+
+AI analysis requested for: https://valor.globo.com/brasil/noticia/2025/10/16/termina-reuniao-de-chanceler-brasileiro-e-marco-rubio-para-discutir-tarifas-dos-eua.ghtml
+AI analysis for: https://valor.globo.com/brasil/noticia/2025/10/16/termina-reuniao-de-chanceler-brasileiro-e-marco-rubio-para-discutir-tarifas-dos-eua.ghtml
+An unexpected error occurred during AI analysis for https://valor.globo.com/brasil/noticia/2025/10/16/termina-reuniao-de-chanceler-brasileiro-e-marco-rubio-para-discutir-tarifas-dos-eua.ghtml: must have exactly one of create/read/write/append mode
+AI Analysis: No summary available
+
+AI analysis requested for: https://www.infomoney.com.br/mercados/china-adia-compras-de-soja-devido-a-altos-premios-do-brasil-dizem-traders/
+AI analysis for: https://www.infomoney.com.br/mercados/china-adia-compras-de-soja-devido-a-altos-premios-do-brasil-dizem-traders/
+An unexpected error occurred during AI analysis for https://www.infomoney.com.br/mercados/china-adia-compras-de-soja-devido-a-altos-premios-do-brasil-dizem-traders/: must have exactly one of create/read/write/append mode
+AI Analysis: No summary available
+
+AI analysis requested for: https://www.terra.com.br/noticias/mundo/america-latina/peso-economico-do-brasil-pode-levar-trump-a-buscar-solucao-pragmatica-para-tarifas-diz-pesquisador,ac79e4e3f57b48579a9800babaf34a7ap7gx2eu5.html
+AI analysis for: https://www.terra.com.br/noticias/mundo/america-latina/peso-economico-do-brasil-pode-levar-trump-a-buscar-solucao-pragmatica-para-tarifas-diz-pesquisador,ac79e4e3f57b48579a9800babaf34a7ap7gx2eu5.html
+An unexpected error occurred during AI analysis for https://www.terra.com.br/noticias/mundo/america-latina/peso-economico-do-brasil-pode-levar-trump-a-buscar-solucao-pragmatica-para-tarifas-diz-pesquisador,ac79e4e3f57b48579a9800babaf34a7ap7gx2eu5.html: must have exactly one of create/read/write/append mode
+AI Analysis: No summary available
+
+AI analysis requested for: https://www.infomoney.com.br/business/global/guerra-comercial-de-trump-e-china-cria-oportunidades-mas-ameaca-ambiente-do-brasil/
