@@ -1,9 +1,3 @@
-
-"""
-Stock News Monitor
-Monitors news for specified companies and identifies articles that could impact stock prices.
-"""
-
 import argparse
 import time
 import schedule
@@ -13,8 +7,20 @@ from typing import List, Set, Dict, Optional
 from newsapi import NewsApiClient
 import logging
 import apikeys
+import google.generativeai as genai
+import requests
+from bs4 import BeautifulSoup
+import os
+import warnings
+import json
+from typing import Dict, Any
 
-# Configure logging
+# Suppress gRPC warnings
+os.environ['GRPC_TRACE'] = 'none'
+os.environ['GRPC_VERBOSITY'] = 'none'
+warnings.filterwarnings('ignore', category=UserWarning)
+
+#loggers
 logging.basicConfig(
     filename='soy.log',
     filemode='a',
@@ -22,6 +28,12 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 soy_logger = logging.getLogger('soy')
+gemini_logger = logging.getLogger('geminianalysis')
+gemini_logger.setLevel(logging.INFO)
+gemini_handler = logging.FileHandler('geminianalysis.log')
+gemini_logger.addHandler(gemini_handler)
+
+genai.configure(api_key=apikeys.gemini_api_key)
 
 @dataclass
 class NewsArticle:
@@ -76,8 +88,19 @@ class NewsMonitor:
         # Basic mapping - could be extended with a comprehensive database
         return {
             
-            'Brasil' : 'comercio de soja'
-        }
+            'Brasil' : 'comercio de soja',
+            'soja': 'soja',
+            'B3': 'b3',
+            'plantação de soja': 'plantio de soja',
+            'colheita de soja': 'colheita de soja',
+            'preço da soja': 'cotação da soja',
+            'contrato futuro de soja': 'contrato futuro de soja',
+            'exportação de soja': 'exportação de soja',
+            'importação de soja': 'importação de soja',
+            'mercado de soja': 'mercado de soja',
+            'commodities agrícolas': 'commodities agrícolas',
+            'clima para soja': 'clima para soja',
+        }   
         # Return mapping for requested tickers
         
     def __init__(self, config: MonitorConfig):
@@ -173,33 +196,74 @@ class NewsMonitor:
             soy_logger.error(f"Error fetching news for {ticker}: {e}")
             return []
     
-    def analyze_with_ai(self, url: str) -> Dict:
-        """
-        Placeholder function for AI analysis of the article.
-        This should be implemented with your preferred AI service.
-        """
-        # TODO: Implement actual AI analysis
-        # This could integrate with OpenAI, Claude, or other AI services
-        soy_logger.info(f"🤖 AI Analysis requested for: {url}")
+    def analyze_with_ai(self, url: str) -> Dict[str, Any]:
+        gemini_logger.info(f"AI analysis requested for: {url}")
+
+        try:
+            #scraping article text
+            response = requests.get(url)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'html.parser')
+            article_text = "".join(soup.get_text().split())[:10000]
+            #model selection and prompt
+            model = genai.GenerativeModel('gemini-2.5-flash')
+            prompt = f"""
+                Act as an expert commodity market analyst specializing in agricultural futures, particularly soybeans. Your analysis will be used as input for a probabilistic model that predicts soy futures prices.
+
+                    Analyze the following news article text. Your primary goal is to extract structured, quantifiable data.
+
+                    **Article:**
+                    {article_text}
+
+                    **Task:**
+                    Provide your analysis in a single JSON object. Do not include any explanatory text before or after the JSON. The JSON object must contain the following keys:
+
+                    1.  `"summary"`: A concise, neutral summary of the article's main points in no more than three sentences.
+                    2.  `"overall_sentiment_score"`: A single floating-point number from -1.0 (extremely negative for the soy market) to 1.0 (extremely positive for the soy market). 0.0 represents a neutral sentiment.
+                    3.  `"key_factors"`: A JSON array of strings. List the primary economic, political, or environmental factors mentioned that could influence soy prices (e.g., "weather conditions in Brazil," "US trade policy," "demand from China").
+                    4.  `"market_impact_score"`: An integer from 1 (minimal impact) to 10 (market-moving event) representing the potential significance of the news.
+                    5.  `"regional_impact"`: A JSON object with keys for "brazil", "usa", and "argentina". For each country, provide an object with two keys:
+                        * `"sentiment"`: A float from -1.0 to 1.0 for that specific region.
+                        * `"reasoning"`: A brief string explaining the sentiment for that region based on the article. If the article does not mention a region, the sentiment should be 0.0 and the reasoning "Not mentioned in the article."
+                    6.  `"confidence_score"`: A float from 0.0 to 1.0 indicating your confidence in the analysis based on the clarity and specificity of the provided article.
+                    7. `"trading_recommendation"`: A string with one of the following values: "buy", "sell", "hold", or "monitor". This recommendation should be based solely on the content of the article and its potential impact on soy futures prices.
+            """
+            ai_response = model.generate_content(prompt)
+            response_text = ai_response.text
+            if response_text.startswith("```json"):
+                response_text = response_text.strip("```json\n").strip("`")
+            analysis_data = json.loads(response_text)
+            gemini_logger.info(f"AI analysis for: {url}")
+
+            filename = "responses.json"
+            with open(filename, "a") as f:
+                json.dump(analysis_data, f, indent=4)
+            print(f"✅ Successfully saved analysis to {filename}")
+
+            gemini_handler.setLevel(logging.INFO)
+
+            return analysis_data
+        except requests.exceptions.RequestException as e:
+            gemini_logger.error(f"failed to fetch : {url}: {e}")
+            return {"error: " f"Failed to fetch URL: {e}"}
+        except json.JSONDecodeError as e:
+            gemini_logger.error(f"Failed to parse JSON from AI response for {url}: {e}")
+            gemini_logger.error(f"Raw response was: {ai_response.text}")
+            return{"error": f"AI returned invalid JSON: {e}"}
+        except Exception as e:
+            gemini_logger.error(f"An unexpected error occurred during AI analysis for {url}: {e}")
+            return {"error": f"An unexpected error ocurred: {e}"}
         
-        return {
-            "sentiment": "neutral",
-            "impact_score": 0.5,
-            "summary": "AI analysis not yet implemented",
-            "recommendation": "monitor"
-        }
-    
     def process_article(self, article: NewsArticle) -> None:
-        """Process a single article - print details and trigger AI analysis."""
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        soy_logger.info(f"📈 soy news alert - {timestamp}")
+        soy_logger.info(f"Article found - {timestamp}")
         soy_logger.info(f"\n{'='*80}")
         soy_logger.info(f"{'='*80}")
-        soy_logger.info(f"Ticker: {article.ticker}")
+        soy_logger.info(f"Trigger Word: {article.ticker}")
         soy_logger.info(f"Title: {article.title}")
         soy_logger.info(f"Published: {article.published_at}")
         soy_logger.info(f"URL: {article.url}")
-        soy_logger.info(f"Matched Keywords: {', '.join(article.matched_keywords)}")
+        soy_logger.info(f"Tokens: {', '.join(article.matched_keywords)}")
 
         if article.description:
             desc = str(article.description)
@@ -209,15 +273,16 @@ class NewsMonitor:
         # Trigger AI analysis
         try:
             ai_result = self.analyze_with_ai(article.url)
-            soy_logger.info(f"AI Analysis: {ai_result.get('summary', 'No summary available')}\n")
+            gemini_logger.info(f"AI Analysis: {ai_result.get('summary', 'No summary available')}\n")
+
         except Exception as e:
-            soy_logger.error(f"Error in AI analysis: {e}")
-            soy_logger.info(f"{'='*80}\n")
+            gemini_logger.error(f"Error in AI analysis: {e}")
+            gemini_logger.info(f"{'='*80}\n")
 
 
     def check_news(self) -> None:
         """Check news for all configured tickers."""
-        soy_logger.info(f"🔍 Checking news for tickers: {', '.join(self.config.tickers)}")
+        soy_logger.info(f"Searching triggers: {', '.join(self.config.tickers)}")
         
         total_articles = 0
         
@@ -235,8 +300,8 @@ class NewsMonitor:
     
     def start_monitoring(self) -> None:
         """Start the continuous monitoring process."""
-        soy_logger.info(f"\n\n🚀 Starting Soy News Monitor\n")
-        soy_logger.info(f"Monitoring tickers: {', '.join(self.config.tickers)}\n")
+        soy_logger.info(f"\n\nEyes opened\n")
+        soy_logger.info(f"Looking for triggers: {', '.join(self.config.tickers)}\n")
         soy_logger.info(f"Refresh interval: {self.config.refresh_interval} seconds\n")
         soy_logger.info(f"Keywords: {', '.join(self.config.price_moving_keywords[:5])}... (+{len(self.config.price_moving_keywords)-5} more)\n")
         soy_logger.info("Press Ctrl+C to stop\n")
@@ -255,18 +320,17 @@ class NewsMonitor:
                 schedule.run_pending()
                 time.sleep(1)
         except KeyboardInterrupt:
-            soy_logger.info("\n👋 Stopping Stock News Monitor...")
-            soy_logger.info("Monitor stopped by user")
+            soy_logger.info("\nClosing eyes\n")
+            soy_logger.info("Eyes closed\n")
 
 def main():
     """Main entry point."""
-    reqs = argparse.ArgumentParser(description='Monitor stock news for \
-                                   price-moving events')
+    reqs = argparse.ArgumentParser(description='Searching for price-moving events')
     reqs.add_argument(
         '--interval',
         type=int,
-        default=30,
-        help='Refresh interval in seconds (default: 30)'
+        default=300,
+        help='Refresh interval in seconds (default: 300)'
     )
 
     init_reqs = reqs.parse_args()

@@ -78,3 +78,5 @@
 
 
 
+
+descosniderar sentimento neutro, 1 pra positivo, 0 pra neutro

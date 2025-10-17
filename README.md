@@ -4,7 +4,7 @@ A Python-based real-time news monitoring system for stock market analysis.
 
 ## 📋 Description
 
-This application monitors stock-related news in real-time using the NewsAPI service, helping traders and investors stay informed about potential price-moving events for their selected stocks.
+This application monitors soy-related news in real-time using the NewsAPI service, helping traders and investors stay informed about potential price-moving events for their selected stocks.
 
 ## 🚀 Features
 
@@ -49,7 +49,7 @@ pip install newsapi-python schedule pandas
 Run the monitor with your chosen stock tickers:
 
 ```bash
-python backtest.py AAPL MSFT --api-key YOUR_API_KEY --interval 300
+python backtest.py
 ```
 
 ### Parameters:
