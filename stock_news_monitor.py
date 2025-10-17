@@ -4,7 +4,6 @@ import schedule
 from datetime import datetime, timedelta
 from dataclasses import dataclass, field
 from typing import List, Set, Dict, Optional
-import typings
 from newsapi import NewsApiClient
 import logging
 import apikeys
