@@ -1,7 +1,2 @@
-venv/
-apikeys.txt
-Quant_Expert/
-oldlogs.txt
-.vscode/
-__pycache__/
-apikeys.py
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*
